@@ -49,6 +49,7 @@ export ROAM_PASS="your-password"
 
 ## Links
 
+- Python SDK: [roamproxy/roamproxy-python](https://github.com/roamproxy/roamproxy-python) — sticky sessions, rotation pool, retries
 - Website: https://roamproxy.com?utm_source=github&utm_medium=referral
 - Locations: https://roamproxy.com/locations
 - Guides: https://roamproxy.com/guides
