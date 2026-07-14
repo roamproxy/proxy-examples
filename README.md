@@ -43,6 +43,8 @@ export ROAM_PASS="your-password"
 ## Examples
 
 - [`python/`](python/) — `requests` and `httpx`
+- [`scrapy/`](scrapy/) — Scrapy spider with per-request rotating proxy
+- [`playwright/`](playwright/) — real Chromium browser on a sticky session
 - [`nodejs/`](nodejs/) — `axios` and native `fetch`
 - [`go/`](go/) — `net/http`
 - [`curl/`](curl/) — command line, HTTP and SOCKS5
