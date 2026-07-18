@@ -44,7 +44,7 @@ export ROAM_PASS="your-password"
 
 - [`python/`](python/) — `requests` and `httpx`
 - [`scrapy/`](scrapy/) — Scrapy spider with per-request rotating proxy
-- [`playwright/`](playwright/) — real Chromium browser on a sticky session
+- [`playwright/`](playwright/) — real Chromium browser on a sticky session; `roam_playwright_lean.py` adds resource blocking (60-85% less bandwidth) and per-context identity rotation
 - [`nodejs/`](nodejs/) — `axios` and native `fetch`
 - [`go/`](go/) — `net/http`
 - [`curl/`](curl/) — command line, HTTP and SOCKS5
