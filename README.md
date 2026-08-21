@@ -48,6 +48,7 @@ export ROAM_PASS="your-password"
 - [`nodejs/`](nodejs/) — `axios` and native `fetch`
 - [`go/`](go/) — `net/http`
 - [`curl/`](curl/) — command line, HTTP and SOCKS5
+- [`retries/`](retries/) — failure-aware retry loop: which HTTP failures are worth retrying, and a per-host request budget that stops you before the block does
 
 ## Links
 
