@@ -49,6 +49,7 @@ export ROAM_PASS="your-password"
 - [`go/`](go/) — `net/http`
 - [`curl/`](curl/) — command line, HTTP and SOCKS5
 - [`retries/`](retries/) — failure-aware retry loop: which HTTP failures are worth retrying, and a per-host request budget that stops you before the block does
+- [`diagnostics/`](diagnostics/) — four probes that tell you *what* got blocked (request, session, client fingerprint, exit IP, account) before you rotate anything
 
 ## Links
 
