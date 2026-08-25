@@ -50,6 +50,7 @@ export ROAM_PASS="your-password"
 - [`curl/`](curl/) — command line, HTTP and SOCKS5
 - [`retries/`](retries/) — failure-aware retry loop: which HTTP failures are worth retrying, and a per-host request budget that stops you before the block does
 - [`diagnostics/`](diagnostics/) — four probes that tell you *what* got blocked (request, session, client fingerprint, exit IP, account) before you rotate anything
+- [`geo/`](geo/) — geo-consistency: derive Accept-Language, timezone and locale from the exit country in one place, and an audit that asserts the client agrees with its exit before the first real request
 
 ## Links
 
