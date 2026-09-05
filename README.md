@@ -52,6 +52,7 @@ export ROAM_PASS="your-password"
 - [`diagnostics/`](diagnostics/) — four probes that tell you *what* got blocked (request, session, client fingerprint, exit IP, account) before you rotate anything
 - [`geo/`](geo/) — geo-consistency: derive Accept-Language, timezone and locale from the exit country in one place, and an audit that asserts the client agrees with its exit before the first real request
 - [`pacing/`](pacing/) — per-exit-IP budget: concurrency cap + jittered token-bucket rate, and a "slow down before you rotate" hook fed by response status and latency
+- [`sessions/`](sessions/) — sticky-session lifecycle: one session per unit of work, a cheap exit-IP drift check, and rotation at the seam instead of on a timer
 
 ## Links
 
