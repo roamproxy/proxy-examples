@@ -54,6 +54,7 @@ export ROAM_PASS="your-password"
 - [`pacing/`](pacing/) — per-exit-IP budget: concurrency cap + jittered token-bucket rate, and a "slow down before you rotate" hook fed by response status and latency
 - [`sessions/`](sessions/) — sticky-session lifecycle: one session per unit of work, a cheap exit-IP drift check, and rotation at the seam instead of on a timer
 - [`contracts/`](contracts/) — a success contract per host (shape, volume, identity) so a `200` with empty or stale content counts as the failure it is, plus a canary that says whether the page is bad or your session is
+- [`auth-forwarder/`](auth-forwarder/) — a localhost forwarder that injects `Proxy-Authorization`, so the browser talks to a proxy with no auth: no 407 handling, no request interception (fixes Playwright hanging on google.com over HTTP/2)
 
 ## Links
 
