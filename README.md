@@ -26,6 +26,7 @@ USERNAME-country-us-session-abc123
 | --- | --- | --- |
 | `-country-<cc>` | `-country-us`, `-country-gb`, `-country-jp` | Exit in a specific country (ISO 3166-1 alpha-2). |
 | `-session-<id>` | `-session-abc123` | Keep the same exit IP across requests (sticky). Reuse the id to keep it; change it to rotate. |
+| `-sesstime-<min>` | `-session-abc123-sesstime-30` | How long the sticky IP is held, 10 to 120 minutes (default about 10). Goes after `-session-...`. |
 
 Omit `-session-...` to get a fresh rotating IP on every request. A full username looks like:
 
@@ -52,6 +53,7 @@ export ROAM_PASS="your-password"
 - [`diagnostics/`](diagnostics/) — four probes that tell you *what* got blocked (request, session, client fingerprint, exit IP, account) before you rotate anything
 - [`geo/`](geo/) — geo-consistency: derive Accept-Language, timezone and locale from the exit country in one place, and an audit that asserts the client agrees with its exit before the first real request
 - [`pacing/`](pacing/) — per-exit-IP budget: concurrency cap + jittered token-bucket rate, and a "slow down before you rotate" hook fed by response status and latency
+- [`sticky-session-length/`](sticky-session-length/) — how long a sticky IP is held (about 10 minutes by default) and choosing 10–120 minutes with `-sesstime-N`
 - [`sessions/`](sessions/) — sticky-session lifecycle: one session per unit of work, a cheap exit-IP drift check, and rotation at the seam instead of on a timer
 - [`contracts/`](contracts/) — a success contract per host (shape, volume, identity) so a `200` with empty or stale content counts as the failure it is, plus a canary that says whether the page is bad or your session is
 - [`auth-forwarder/`](auth-forwarder/) — a localhost forwarder that injects `Proxy-Authorization`, so the browser talks to a proxy with no auth: no 407 handling, no request interception (fixes Playwright hanging on google.com over HTTP/2)
